@@ -7,6 +7,11 @@ layout: default
 <h2>Covid-19 no Mundo</h2>
 <h3>Número total de casos</h3>
   <link href="cases_animated_en.html" rel="import" />  
+  <script>
+    var extern = document.getElementsByTagName("link")[0].import;
+    var video = extern.getElementsByTagName("video")[0];
+    document.write(video)
+  </script>
 <ul>   
   <li><a href="cases_animated_en.html">Number of cases</a></li>
   <li><a href="cases_per_mil_animated_en.html">Number of cases per million people</a></li>
