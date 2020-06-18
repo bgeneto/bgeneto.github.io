@@ -1,23 +1,24 @@
 ---
 layout: default
 ---
+
 <div id="container">
-<ul class="nav nav-pills nav-fill" id="pills-tab" role="tablist">
+<ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
   <li class="nav-item">
-    <a class="nav-link active" id="pills-brasil-graficos-tab" data-toggle="pill" href="#pills-brasil-graficos" role="tab" aria-controls="pills-brasil-graficos" aria-selected="true">Brasil: gráficos</a>
+    <a class="nav-link active" id="tabs-brasil-graficos-tab" data-toggle="tab" href="#tabs-brasil-graficos" role="tab" aria-controls="tabs-brasil-graficos" aria-selected="true">Brasil: gráficos</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="pills-brasil-animacoes-tab" data-toggle="pill" href="#pills-brasil-animacoes" role="tab" aria-controls="pills-brasil-animacoes" aria-selected="true">Brasil: animações</a>
+    <a class="nav-link" id="tabs-brasil-animacoes-tab" data-toggle="tab" href="#tabs-brasil-animacoes" role="tab" aria-controls="tabs-brasil-animacoes" aria-selected="true">Brasil: animações</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="pills-mundo-graficos-tab" data-toggle="pill" href="#pills-mundo-graficos" role="tab" aria-controls="pills-mundo-graficos" aria-selected="false">Mundo: gráficos</a>
+    <a class="nav-link" id="tabs-mundo-graficos-tab" data-toggle="tab" href="#tabs-mundo-graficos" role="tab" aria-controls="tabs-mundo-graficos" aria-selected="false">Mundo: gráficos</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="pills-mundo-animacoes-tab" data-toggle="pill" href="#pills-mundo-animacoes" role="tab" aria-controls="pills-mundo-animacoes" aria-selected="false">Mundo: animações</a>
+    <a class="nav-link" id="tabs-mundo-animacoes-tab" data-toggle="tab" href="#tabs-mundo-animacoes" role="tab" aria-controls="tabs-mundo-animacoes" aria-selected="false">Mundo: animações</a>
   </li>
 </ul>
-<div class="tab-content" id="pills-tabContent">
-  <div class="tab-pane fade show active" id="pills-brasil-graficos" role="tabpanel" aria-labelledby="pills-brasil-graficos-tab">
+<div class="tab-content" id="tabs-tabContent">
+  <div class="tab-pane fade show active" id="tabs-brasil-graficos" role="tabpanel" aria-labelledby="tabs-brasil-graficos-tab">
     <h3>Índice:</h3>
     <ul>
       <li><a href="#graf-casos">Gráficos: casos</a></li>
@@ -68,7 +69,7 @@ layout: default
     </a>
   </div>
 
-  <div class="tab-pane fade show active" id="pills-brasil-animacoes" role="tabpanel" aria-labelledby="pills-brasil-animacoes-tab">
+  <div class="tab-pane fade show active" id="tabs-brasil-animacoes" role="tabpanel" aria-labelledby="tabs-brasil-animacoes-tab">
     <h3>Índice:</h3>
     <ul>
       <li><a href="#anim-casos">Animações: casos</a></li>
@@ -168,7 +169,7 @@ layout: default
     <a href="https://github.com/bgeneto/covid19br/raw/master/output/deaths_per_mil_animated_city.mp4" target="_blank">download</a>
   </div>
 
-  <div class="tab-pane fade show active" id="pills-mundo-graficos" role="tabpanel" aria-labelledby="pills-mundo-graficos-tab">
+  <div class="tab-pane fade show active" id="tabs-mundo-graficos" role="tabpanel" aria-labelledby="tabs-mundo-graficos-tab">
     <h3>Índice:</h3>
     <ul>
       <li><a href="#wgraf-casos">Gráficos: casos</a></li>
@@ -198,7 +199,7 @@ layout: default
     </a>
   </div>
 
-  <div class="tab-pane fade" id="pills-mundo-animacoes" role="tabpanel" aria-labelledby="pills-mundo-animacoes-tab">
+  <div class="tab-pane fade" id="tabs-mundo-animacoes" role="tabpanel" aria-labelledby="tabs-mundo-animacoes-tab">
     <h3>Índice:</h3>
     <ul>
       <li><a href="#wanim-casos">Animações: casos</a></li>
@@ -243,3 +244,12 @@ layout: default
 <p>
   <em>Veja meu <a href="https://github.com/bgeneto/covid19br">repositório covid19br</a> caso tenha interesse em gerar gráficos e animações semelhantes a estes.</em>
 </p>
+
+<script>
+  $(function () {
+    $('#myTab a').on('click', function (e) {
+      e.preventDefault();
+      $(this).tab('show');
+    })
+  })
+</script>
