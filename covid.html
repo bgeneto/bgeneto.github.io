@@ -2,265 +2,252 @@
 layout: default
 ---
 
-<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+<ul class="nav nav-pills nav-fill" id="pills-tab" role="tablist">
   <li class="nav-item">
-    <a class="nav-link active" id="pills-brasil-tab" data-toggle="pill" href="#pills-brasil" role="tab" aria-controls="pills-brasil" aria-selected="true">Brasil</a>
+    <a class="nav-link active" id="pills-brasil-graficos-tab" data-toggle="pill" href="#pills-brasil-graficos" role="tab" aria-controls="pills-brasil-graficos" aria-selected="true">Brasil: gráficos</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="pills-mundo-tab" data-toggle="pill" href="#pills-mundo" role="tab" aria-controls="pills-mundo" aria-selected="false">Mundo</a>
+    <a class="nav-link active" id="pills-brasil-animacoes-tab" data-toggle="pill" href="#pills-brasil-animacoes" role="tab" aria-controls="pills-brasil-animacoes" aria-selected="true">Brasil: animações</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-mundo-graficos-tab" data-toggle="pill" href="#pills-mundo-graficos" role="tab" aria-controls="pills-mundo-graficos" aria-selected="false">Mundo: gráficos</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-mundo-animacoes-tab" data-toggle="pill" href="#pills-mundo-animacoes" role="tab" aria-controls="pills-mundo-animacoes" aria-selected="false">Mundo: animações</a>
   </li>
 </ul>
 <div class="tab-content" id="pills-tabContent">
-  <div class="tab-pane fade show active" id="pills-brasil" role="tabpanel" aria-labelledby="pills-brasil-tab">
-  <h3>Índice:</h3>
-   <ul>
-     <li><a href="#graf-casos">Gráficos: casos</a></li>
-     <li><a href="#graf-obitos">Gráficos: óbitos</a></li>
-     <li><a href="#anim-casos">Animações: casos</a></li>
-     <li><a href="#anim-obitos">Animações: óbitos</a></li>
-   </ul>
-</ul>
-  </div>
-  <div class="tab-pane fade" id="pills-mundo" role="tabpanel" aria-labelledby="pills-mundo-tab">
-    <h3>Índice:</h3> 
+  <div class="tab-pane fade show active" id="pills-brasil-graficos" role="tabpanel" aria-labelledby="pills-brasil-graficos-tab">
+    <h3>Índice:</h3>
     <ul>
-     <li><a href="#wgraf-casos">Gráficos: casos</a></li>
-     <li><a href="#wgraf-obitos">Gráficos: óbitos</a></li>
-     <li><a href="#wanim-casos">Animações: casos</a></li>
-     <li><a href="#wanim-obitos">Animações: óbitos</a></li>
-   </ul>
+      <li><a href="#graf-casos">Gráficos: casos</a></li>
+      <li><a href="#graf-obitos">Gráficos: óbitos</a></li>
+    </ul>
+    <h1 id="graf">Gráficos: COVID-19 no Brasil</h1>
+
+    <h2 id="graf-casos">CASOS</h2>
+
+    <h3>Número total de <b>casos</b> por <em>densidade demográfica</em> nos <b>estados</b></h3>
+    <a href="https://github.com/bgeneto/covid19br/raw/master/output/png/confirmed_per_den_per_state.png" target="_blank">
+      <img class="zoom" src="https://github.com/bgeneto/covid19br/raw/master/output/png/confirmed_per_den_per_state.png" alt="confirmed_per_den_per_state" style="cursor: zoom-in;" />
+    </a>
+
+    <h3>Número total de <b>casos</b> por <em>densidade demográfica</em> nas <b>cidades</b></h3>
+    <p>Creio que este gráfico seja muito mais representativo que o anterior. Porém, acredito que ainda tenha baixo significado nas capitais da região norte.</p>
+    <a href="https://github.com/bgeneto/covid19br/raw/master/output/png/confirmed_per_den_per_city.png" target="_blank">
+      <img class="zoom" src="https://github.com/bgeneto/covid19br/raw/master/output/png/confirmed_per_den_per_city.png" alt="confirmed_per_den_per_city" style="cursor: zoom-in;" />
+    </a>
+
+    <h3>Número total de <b>casos</b> por <em>milhão de habitantes</em> nos <b>estados</b></h3>
+    <a href="https://github.com/bgeneto/covid19br/raw/master/output/png/confirmed_per_mil_per_state.png" target="_blank">
+      <img class="zoom" src="https://github.com/bgeneto/covid19br/raw/master/output/png/confirmed_per_mil_per_state.png" alt="confirmed_per_mil_per_state" style="cursor: zoom-in;" />
+    </a>
+
+    <h3>Número total de <b>casos</b> por <em>milhão de habitantes</em> nas <b>cidades</b></h3>
+    <a href="https://github.com/bgeneto/covid19br/raw/master/output/png/confirmed_per_mil_per_city.png" target="_blank">
+      <img class="zoom" src="https://github.com/bgeneto/covid19br/raw/master/output/png/confirmed_per_mil_per_city.png" alt="confirmed_per_mil_per_city" style="cursor: zoom-in;" />
+    </a>
+
+    <h2 id="graf-obitos">ÓBITOS</h2>
+
+    <p>Devido à grande diferença de subnotificação entre os estados brasileiros, os gráficos contendo o número total de óbtidos são provavelmente mais próximos da realidade de cada local.</p>
+
+    <h3>Número total de <b>óbitos</b> por <em>densidade demográfica</em> nos <b>estados</b></h3>
+    <a href="https://github.com/bgeneto/covid19br/raw/master/output/png/deaths_per_den_per_state.png" target="_blank">
+      <img class="zoom" src="https://github.com/bgeneto/covid19br/raw/master/output/png/deaths_per_den_per_state.png" alt="deaths_per_den_per_state" style="cursor: zoom-in;" />
+    </a>
+    <h3>Número total de <b>óbitos</b> por <em>densidade demográfica</em> nas <b>cidades</b></h3>
+    <p>Creio que este gráfico seja muito mais representativo que o anterior. Porém, acredito que ainda tenha baixo significado nas capitais da região norte.</p>
+    <a href="https://github.com/bgeneto/covid19br/raw/master/output/png/deaths_per_den_per_city.png" target="_blank">
+      <img class="zoom" src="https://github.com/bgeneto/covid19br/raw/master/output/png/deaths_per_den_per_city.png" alt="deaths_per_den_per_city" style="cursor: zoom-in;" />
+    </a>
+    <h3>Número total de <b>óbitos</b> por <em>milhão de habitantes</em> nos <b>estados</b></h3>
+    <a href="https://github.com/bgeneto/covid19br/raw/master/output/png/deaths_per_mil_per_state.png" target="_blank">
+      <img class="zoom" src="https://github.com/bgeneto/covid19br/raw/master/output/png/deaths_per_mil_per_state.png" alt="deaths_per_mil_per_state" style="cursor: zoom-in;" />
+    </a>
+    <h3>Número total de <b>óbitos</b> por <em>milhão de habitantes</em> nas <b>cidades</b></h3>
+    <a href="https://github.com/bgeneto/covid19br/raw/master/output/png/deaths_per_mil_per_city.png" target="_blank">
+      <img class="zoom" src="https://github.com/bgeneto/covid19br/raw/master/output/png/deaths_per_mil_per_city.png" alt="deaths_per_mil_per_city" style="cursor: zoom-in;" />
+    </a>
+  </div>
+
+  <div class="tab-pane fade show active" id="pills-brasil-animacoes" role="tabpanel" aria-labelledby="pills-brasil-animacoes-tab">
+    <h3>Índice:</h3>
+    <ul>
+      <li><a href="#anim-casos">Animações: casos</a></li>
+      <li><a href="#anim-obitos">Animações: óbitos</a></li>
+    </ul>
+
+    <h1 id="anim">Animações: COVID-19 no Brasil</h1>
+
+    <h2 id="anim-casos">CASOS</h2>
+
+    <h3>Número total de <b>casos</b> por <b>estado</b></h3>
+    <video height="560" controls>
+      <source src="https://github.com/bgeneto/covid19br/raw/master/output/confirmed_animated_state.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <a href="https://github.com/bgeneto/covid19br/raw/master/output/confirmed_animated_state.mp4" target="_blank">download</a>
+
+    <h3>Número total de <b>casos</b> por <b>cidade</b></h3>
+    <video height="560" controls>
+      <source src="https://github.com/bgeneto/covid19br/raw/master/output/confirmed_animated_city.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <a href="https://github.com/bgeneto/covid19br/raw/master/output/confirmed_animated_city.mp4" target="_blank">download</a>
+
+    <h3>Número total de <b>casos</b> por <em>densidade demográfica</em> nos <b>estados</b></h3>
+    <video height="560" controls>
+      <source src="https://github.com/bgeneto/covid19br/raw/master/output/confirmed_per_den_animated_state.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <a href="https://github.com/bgeneto/covid19br/raw/master/output/confirmed_per_den_animated_state.mp4" target="_blank">download</a>
+
+    <h3>Número total de <b>casos</b> por <em>densidade demográfica</em> nas <b>cidades</b></h3>
+    <p>Creio que este gráfico seja muito mais representativo que o anterior. Porém, acredito que ainda tenha baixo significado nas capitais da região norte.</p>
+    <video height="560" controls>
+      <source src="https://github.com/bgeneto/covid19br/raw/master/output/confirmed_per_den_animated_city.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <a href="https://github.com/bgeneto/covid19br/raw/master/output/confirmed_per_den_animated_city.mp4" target="_blank">download</a>
+
+    <h3>Número total de <b>casos</b> por <em>milhão de habitantes</em> nos <b>estados</b></h3>
+    <video height="560" controls>
+      <source src="https://github.com/bgeneto/covid19br/raw/master/output/confirmed_per_mil_animated_state.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <a href="https://github.com/bgeneto/covid19br/raw/master/output/confirmed_per_mil_animated_state.mp4" target="_blank">download</a>
+
+    <h3>Número total de <b>casos</b> por <em>milhão de habitantes</em> nas <b>cidades</b></h3>
+    <video height="560" controls>
+      <source src="https://github.com/bgeneto/covid19br/raw/master/output/confirmed_per_mil_animated_city.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <a href="https://github.com/bgeneto/covid19br/raw/master/output/confirmed_per_mil_animated_city.mp4" target="_blank">download</a>
+
+    <h2 id="anim-obitos">ÓBITOS</h2>
+
+    <p>Devido à grande diferença de subnotificação entre os estados brasileiros, os gráficos contendo o número total de óbtidos são provavelmente mais próximos da realidade de cada local.</p>
+
+    <h3>Número total de <b>óbitos</b> por <b>estado</b></h3>
+    <video height="560" controls>
+      <source src="https://github.com/bgeneto/covid19br/raw/master/output/deaths_animated_state.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <a href="https://github.com/bgeneto/covid19br/raw/master/output/deaths_animated_state.mp4" target="_blank">download</a>
+
+    <h3>Número total de <b>óbitos</b> por <b>cidade</b></h3>
+    <video height="560" controls>
+      <source src="https://github.com/bgeneto/covid19br/raw/master/output/deaths_animated_city.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <a href="https://github.com/bgeneto/covid19br/raw/master/output/deaths_animated_city.mp4" target="_blank">download</a>
+
+    <h3>Número total de <b>óbitos</b> por <em>densidade demográfica</em> nos <b>estados</b></h3>
+    <video height="560" controls>
+      <source src="https://github.com/bgeneto/covid19br/raw/master/output/deaths_per_den_animated_state.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <a href="https://github.com/bgeneto/covid19br/raw/master/output/deaths_per_den_animated_state.mp4" target="_blank">download</a>
+
+    <h3>Número total de <b>óbitos</b> por <em>densidade demográfica</em> nas <b>cidades</b></h3>
+    <p>Creio que este gráfico seja muito mais representativo que o anterior. Porém, acredito que ainda tenha baixo significado nas capitais da região norte.</p>
+    <video height="560" controls>
+      <source src="https://github.com/bgeneto/covid19br/raw/master/output/deaths_per_den_animated_city.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <a href="https://github.com/bgeneto/covid19br/raw/master/output/deaths_per_den_animated_city.mp4" target="_blank">download</a>
+
+    <h3>Número total de <b>óbitos</b> por <em>milhão de habitantes</em> nos <b>estados</b></h3>
+    <video height="560" controls>
+      <source src="https://github.com/bgeneto/covid19br/raw/master/output/deaths_per_mil_animated_state.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <a href="https://github.com/bgeneto/covid19br/raw/master/output/deaths_per_mil_animated_state.mp4" target="_blank">download</a>
+
+    <h3>Número total de <b>óbitos</b> por <em>milhão de habitantes</em> nas <b>cidades</b></h3>
+    <video height="560" controls>
+      <source src="https://github.com/bgeneto/covid19br/raw/master/output/deaths_per_mil_animated_city.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <a href="https://github.com/bgeneto/covid19br/raw/master/output/deaths_per_mil_animated_city.mp4" target="_blank">download</a>
+  </div>
+
+  <div class="tab-pane fade show active" id="pills-mundo-graficos" role="tabpanel" aria-labelledby="pills-mundo-graficos-tab">
+    <h3>Índice:</h3>
+    <ul>
+      <li><a href="#wgraf-casos">Gráficos: casos</a></li>
+      <li><a href="#wgraf-obitos">Gráficos: óbitos</a></li>
+    </ul>
+
+    <h1 id="wgraf">Gráficos: COVID-19 no Mundo</h1>
+
+    <h2 id="wgraf-casos">CASOS</h2>
+
+    <h3>Número total de <b>casos</b> por país</h3>
+    <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=cases_per_country.png" target="_blank">
+      <img class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=cases_per_country.png" alt="confirmed_per_country" style="cursor: zoom-in;" />
+    </a>
+    <h3>Número total de <b>casos</b> por <em>milhão de habitantes</em></h3>
+    <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=cases_per_mil_per_country.png" target="_blank">
+      <img class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=cases_per_mil_per_country.png" alt="confirmed_per_mil_per_country" style="cursor: zoom-in;" />
+    </a>
+
+    <h2 id="wgraf-obitos">ÓBITOS</h2>
+
+    <h3>Número total de <b>óbitos</b> por país</h3>
+    <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_country.png" target="_blank">
+      <img class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_country.png" alt="confirmed_per_country" style="cursor: zoom-in;" />
+    </a>
+    <h3>Número total de <b>óbitos</b> por <em>milhão de habitantes</em></h3>
+    <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_mil_per_country.png" target="_blank">
+      <img class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_mil_per_country.png" alt="confirmed_per_mil_per_country" style="cursor: zoom-in;" />
+    </a>
+  </div>
+
+  <div class="tab-pane fade" id="pills-mundo-animacoes" role="tabpanel" aria-labelledby="pills-mundo-animacoes-tab">
+    <h3>Índice:</h3>
+    <ul>
+      <li><a href="#wanim-casos">Animações: casos</a></li>
+      <li><a href="#wanim-obitos">Animações: óbitos</a></li>
+    </ul>
+
+    <h1 id="wanim">Animações: COVID-19 no Mundo</h1>
+
+    <h2 id="wanim-casos">CASOS</h2>
+
+    <h3>Número total de <b>casos</b> por <b>país</b></h3>
+    <video height="560" controls>
+      <source src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=cases_animated_pt.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=cases_animated_pt.mp4" target="_blank">download</a>
+
+    <h3>Número total de <b>casos</b> por <b>milhão de habitantes</b></h3>
+    <video height="560" controls>
+      <source src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=cases_per_mil_animated_pt.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=cases_per_mil_animated_pt.mp4" target="_blank">download</a>
+
+    <h2 id="wanim-obitos">ÓBITOS</h2>
+
+    <h3>Número total de <b>óbitos</b> por <b>país</b></h3>
+    <video height="560" controls>
+      <source src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_animated_pt.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_animated_pt.mp4" target="_blank">download</a>
+
+    <h3>Número total de <b>óbitos</b> por <b>milhão de habitantes</b></h3>
+    <video height="560" controls>
+      <source src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_mil_animated_pt.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_mil_animated_pt.mp4" target="_blank">download</a>
   </div>
 </div>
 
-
-
-<h1 id="wgraf">Gráficos: COVID-19 no Mundo</h1>
-
-<h2 id="wgraf-casos">CASOS</h2>
-
-<h3>Número total de <b>casos</b> por país</h3>
-<a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=cases_per_country.png" target="_blank"> 
-   <img class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=cases_per_country.png" 
-        alt="confirmed_per_country" style="cursor: zoom-in;">
-</a>
-<h3>Número total de <b>casos</b> por <em>milhão de habitantes</em></h3>
-<a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=cases_per_mil_per_country.png" target="_blank"> 
-   <img class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=cases_per_mil_per_country.png" 
-        alt="confirmed_per_mil_per_country" style="cursor: zoom-in;">
-</a>
-
-<h2 id="wgraf-obitos">ÓBITOS</h2>
-
-<h3>Número total de <b>óbitos</b> por país</h3>
-<a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_country.png" target="_blank"> 
-   <img class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_country.png" 
-        alt="confirmed_per_country" style="cursor: zoom-in;">
-</a>
-<h3>Número total de <b>óbitos</b> por <em>milhão de habitantes</em></h3>
-<a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_mil_per_country.png" target="_blank"> 
-   <img class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_mil_per_country.png" 
-        alt="confirmed_per_mil_per_country" style="cursor: zoom-in;">
-</a>
-
-<h1 id="wanim">Animações: COVID-19 no Mundo</h1>
-
-<h2 id="wanim-casos">CASOS</h2>
-
-<h3>Número total de <b>casos</b> por <b>país</b></h3>
-<video height="560" controls>
-  <source src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=cases_animated_pt.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=cases_animated_pt.mp4" target="_blank">download</a>
-
-<h3>Número total de <b>casos</b> por <b>milhão de habitantes</b></h3>
-<video height="560" controls>
-  <source src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=cases_per_mil_animated_pt.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=cases_per_mil_animated_pt.mp4" target="_blank">download</a>
-
-<h2 id="wanim-obitos">ÓBITOS</h2>
-
-<h3>Número total de <b>óbitos</b> por <b>país</b></h3>
-<video height="560" controls>
-  <source src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_animated_pt.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_animated_pt.mp4" target="_blank">download</a>
-
-<h3>Número total de <b>óbitos</b> por <b>milhão de habitantes</b></h3>
-<video height="560" controls>
-  <source src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_mil_animated_pt.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_mil_animated_pt.mp4" target="_blank">download</a>
-
-<!-- BRASIL -->
-
-<h1 id="graf">Gráficos: COVID-19 no Brasil</h1>
-
-<h2 id="graf-casos">CASOS</h2>
-
-<h3>Número total de <b>casos</b> por <em>densidade demográfica</em> nos <b>estados</b></h3>
-<a href="https://github.com/bgeneto/covid19br/raw/master/output/png/confirmed_per_den_per_state.png" target="_blank"> 
-   <img class="zoom" src="https://github.com/bgeneto/covid19br/raw/master/output/png/confirmed_per_den_per_state.png" 
-        alt="confirmed_per_den_per_state" style="cursor: zoom-in;">
-</a>
-
-<h3>Número total de <b>casos</b> por <em>densidade demográfica</em> nas <b>cidades</b></h3>
-<p>Creio que este gráfico seja muito mais representativo que o anterior. 
-   Porém, acredito que ainda tenha baixo significado nas capitais da região norte.
+<p>
+  <em>Veja meu <a href="https://github.com/bgeneto/covid19br">repositório covid19br</a> caso tenha interesse em gerar gráficos e animações semelhantes a estes.</em>
 </p>
-<a href="https://github.com/bgeneto/covid19br/raw/master/output/png/confirmed_per_den_per_city.png" target="_blank"> 
-   <img class="zoom" src="https://github.com/bgeneto/covid19br/raw/master/output/png/confirmed_per_den_per_city.png" 
-        alt="confirmed_per_den_per_city" style="cursor: zoom-in;">
-</a>
-
-<h3>Número total de <b>casos</b> por <em>milhão de habitantes</em> nos <b>estados</b></h3>
-<a href="https://github.com/bgeneto/covid19br/raw/master/output/png/confirmed_per_mil_per_state.png" target="_blank"> 
-   <img class="zoom" src="https://github.com/bgeneto/covid19br/raw/master/output/png/confirmed_per_mil_per_state.png" 
-        alt="confirmed_per_mil_per_state" style="cursor: zoom-in;">
-</a>
-
-<h3>Número total de <b>casos</b> por <em>milhão de habitantes</em> nas <b>cidades</b></h3>
-<a href="https://github.com/bgeneto/covid19br/raw/master/output/png/confirmed_per_mil_per_city.png" target="_blank"> 
-   <img class="zoom" src="https://github.com/bgeneto/covid19br/raw/master/output/png/confirmed_per_mil_per_city.png" 
-        alt="confirmed_per_mil_per_city" style="cursor: zoom-in;">
-</a>
-   
-<h2 id="graf-obitos">ÓBITOS</h2>
-
-<p>Devido à grande diferença de subnotificação entre os estados brasileiros, 
-   os gráficos contendo o número total de óbtidos são provavelmente mais próximos da realidade de cada local.
-</p>
-
-<h3>Número total de <b>óbitos</b> por <em>densidade demográfica</em> nos <b>estados</b></h3>
-<a href="https://github.com/bgeneto/covid19br/raw/master/output/png/deaths_per_den_per_state.png" target="_blank"> 
-   <img class="zoom" src="https://github.com/bgeneto/covid19br/raw/master/output/png/deaths_per_den_per_state.png" 
-        alt="deaths_per_den_per_state" style="cursor: zoom-in;">
-</a>
-<h3>Número total de <b>óbitos</b> por <em>densidade demográfica</em> nas <b>cidades</b></h3>
-<p>Creio que este gráfico seja muito mais representativo que o anterior. 
-   Porém, acredito que ainda tenha baixo significado nas capitais da região norte.</p>
-<a href="https://github.com/bgeneto/covid19br/raw/master/output/png/deaths_per_den_per_city.png" target="_blank"> 
-   <img class="zoom" src="https://github.com/bgeneto/covid19br/raw/master/output/png/deaths_per_den_per_city.png" 
-        alt="deaths_per_den_per_city" style="cursor: zoom-in;">
-</a>
-<h3>Número total de <b>óbitos</b> por <em>milhão de habitantes</em> nos <b>estados</b></h3>
-<a href="https://github.com/bgeneto/covid19br/raw/master/output/png/deaths_per_mil_per_state.png" target="_blank"> 
-   <img class="zoom" src="https://github.com/bgeneto/covid19br/raw/master/output/png/deaths_per_mil_per_state.png" 
-        alt="deaths_per_mil_per_state" style="cursor: zoom-in;">
-</a>
-<h3>Número total de <b>óbitos</b> por <em>milhão de habitantes</em> nas <b>cidades</b></h3>
-<a href="https://github.com/bgeneto/covid19br/raw/master/output/png/deaths_per_mil_per_city.png" target="_blank"> 
-   <img class="zoom" src="https://github.com/bgeneto/covid19br/raw/master/output/png/deaths_per_mil_per_city.png" 
-        alt="deaths_per_mil_per_city" style="cursor: zoom-in;">
-</a>
-
-<hr>
-
-<h1 id="anim">Animações: COVID-19 no Brasil</h1>
-
-<h2 id="anim-casos">CASOS</h2>
-
-<h3>Número total de <b>casos</b> por <b>estado</b></h3>
-<video height="560" controls>
-  <source src="https://github.com/bgeneto/covid19br/raw/master/output/confirmed_animated_state.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<a href="https://github.com/bgeneto/covid19br/raw/master/output/confirmed_animated_state.mp4" target="_blank">download</a>
-
-<h3>Número total de <b>casos</b> por <b>cidade</b></h3>
-<video height="560" controls>
-  <source src="https://github.com/bgeneto/covid19br/raw/master/output/confirmed_animated_city.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<a href="https://github.com/bgeneto/covid19br/raw/master/output/confirmed_animated_city.mp4" target="_blank">download</a>
-
-<h3>Número total de <b>casos</b> por <em>densidade demográfica</em> nos <b>estados</b></h3>
-<video height="560" controls>
-  <source src="https://github.com/bgeneto/covid19br/raw/master/output/confirmed_per_den_animated_state.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<a href="https://github.com/bgeneto/covid19br/raw/master/output/confirmed_per_den_animated_state.mp4" target="_blank">download</a>
-
-<h3>Número total de <b>casos</b> por <em>densidade demográfica</em> nas <b>cidades</b></h3>
-<p>Creio que este gráfico seja muito mais representativo que o anterior. 
-   Porém, acredito que ainda tenha baixo significado nas capitais da região norte.
-</p>
-<video height="560" controls>
-  <source src="https://github.com/bgeneto/covid19br/raw/master/output/confirmed_per_den_animated_city.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<a href="https://github.com/bgeneto/covid19br/raw/master/output/confirmed_per_den_animated_city.mp4" target="_blank">download</a>
-
-
-<h3>Número total de <b>casos</b> por <em>milhão de habitantes</em> nos <b>estados</b></h3>
-<video height="560" controls>
-  <source src="https://github.com/bgeneto/covid19br/raw/master/output/confirmed_per_mil_animated_state.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<a href="https://github.com/bgeneto/covid19br/raw/master/output/confirmed_per_mil_animated_state.mp4" target="_blank">download</a>
-
-<h3>Número total de <b>casos</b> por <em>milhão de habitantes</em> nas <b>cidades</b></h3>
-<video height="560" controls>
-  <source src="https://github.com/bgeneto/covid19br/raw/master/output/confirmed_per_mil_animated_city.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<a href="https://github.com/bgeneto/covid19br/raw/master/output/confirmed_per_mil_animated_city.mp4" target="_blank">download</a>
-   
-<h2 id="anim-obitos">ÓBITOS</h2>
-
-<p>Devido à grande diferença de subnotificação entre os estados brasileiros, 
-   os gráficos contendo o número total de óbtidos são provavelmente mais próximos da realidade de cada local.
-</p>
-
-<h3>Número total de <b>óbitos</b> por <b>estado</b></h3>
-<video height="560" controls>
-  <source src="https://github.com/bgeneto/covid19br/raw/master/output/deaths_animated_state.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<a href="https://github.com/bgeneto/covid19br/raw/master/output/deaths_animated_state.mp4" target="_blank">download</a>
-
-<h3>Número total de <b>óbitos</b> por <b>cidade</b></h3>
-<video height="560" controls>
-  <source src="https://github.com/bgeneto/covid19br/raw/master/output/deaths_animated_city.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<a href="https://github.com/bgeneto/covid19br/raw/master/output/deaths_animated_city.mp4" target="_blank">download</a>
-
-<h3>Número total de <b>óbitos</b> por <em>densidade demográfica</em> nos <b>estados</b></h3>
-<video height="560" controls>
-  <source src="https://github.com/bgeneto/covid19br/raw/master/output/deaths_per_den_animated_state.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<a href="https://github.com/bgeneto/covid19br/raw/master/output/deaths_per_den_animated_state.mp4" target="_blank">download</a>
-
-<h3>Número total de <b>óbitos</b> por <em>densidade demográfica</em> nas <b>cidades</b></h3>
-<p>Creio que este gráfico seja muito mais representativo que o anterior. 
-   Porém, acredito que ainda tenha baixo significado nas capitais da região norte.</p>
-<video height="560" controls>
-  <source src="https://github.com/bgeneto/covid19br/raw/master/output/deaths_per_den_animated_city.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<a href="https://github.com/bgeneto/covid19br/raw/master/output/deaths_per_den_animated_city.mp4" target="_blank">download</a>
-
-<h3>Número total de <b>óbitos</b> por <em>milhão de habitantes</em> nos <b>estados</b></h3>
-<video height="560" controls>
-  <source src="https://github.com/bgeneto/covid19br/raw/master/output/deaths_per_mil_animated_state.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<a href="https://github.com/bgeneto/covid19br/raw/master/output/deaths_per_mil_animated_state.mp4" target="_blank">download</a>
-
-<h3>Número total de <b>óbitos</b> por <em>milhão de habitantes</em> nas <b>cidades</b></h3>
-<video height="560" controls>
-  <source src="https://github.com/bgeneto/covid19br/raw/master/output/deaths_per_mil_animated_city.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<a href="https://github.com/bgeneto/covid19br/raw/master/output/deaths_per_mil_animated_city.mp4" target="_blank">download</a>
-
-<p><em>Veja meu <a href="https://github.com/bgeneto/covid19br">repositório covid19br</a> caso 
-   tenha interesse em gerar gráficos e animações semelhantes a estes.</em>
-</p>
-
