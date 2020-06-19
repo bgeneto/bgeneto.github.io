@@ -267,7 +267,7 @@ layout: default
         </span>
         <br /><br />
         <div id="img-container-casos">
-          <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=AC_confirmed_historical.png" target="_blank">
+          <a id="outros-estados-casos-link" href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=AC_confirmed_historical.png" target="_blank">
             <img id="outros-estados-casos" class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=AC_confirmed_historical.png" />
           </a>
         </div>
@@ -318,7 +318,7 @@ layout: default
         </span>
         <br /><br />
         <div id="img-container-mortes">
-          <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=AC_deaths_historical.png" target="_blank">
+          <a id="outros-estados-mortes-link" href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=AC_deaths_historical.png" target="_blank">
             <img id="outros-estados-mortes" class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=AC_deaths_historical.png" />
           </a>
         </div>
@@ -401,17 +401,22 @@ layout: default
       $(this).tab("show");
     });
     // activate select2 comboboxes
-    $("#estados-casos, #estados-mortes, #wcombo, #brcombo").select2({
+    $("#estados-casos, #estados-mortes, #wcombo").select2({
+      width: "resolve",
+    });
+    $("#wcombo").select2({
       width: "resolve",
     });
     // onchange load images or videos
     $("#estados-casos").change(function () {
-      val = $("#estados-casos").val();
+      val = $(this).val();
       $("#outros-estados-casos").attr("src", baseUrl + imgUrls[val]);
+      $("#outros-estados-casos-link").attr("href", baseUrl + imgUrls[val]);
     });
     $("#estados-mortes").change(function () {
       val = $("#estados-mortes").val();
       $("#outros-estados-mortes").attr("src", baseUrl + imgUrls[val]);
+      $("#outros-estados-mortes-link").attr("href", baseUrl + imgUrls[val]);
     });
     $("#wcombo").change(function () {
       val = $(this).val();
