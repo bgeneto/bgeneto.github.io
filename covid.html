@@ -244,95 +244,105 @@ layout: default
       <br />
       <div>
         <h3>CASOS</h3>
-        <p>Escolha um estado brasileiro abaixo:</p>
-        <select class="estados-casos form-control" style="width: 33%;">
-          <optgroup label="Região Norte">
-            <option value="AC_confirmed">Acre</option>
-            <option value="AP_confirmed">Amapá</option>
-            <option value="AM_confirmed">Amazonas</option>
-            <option value="PA_confirmed">Pará</option>
-            <option value="RO_confirmed">Rondônia</option>
-            <option value="RR_confirmed">Roraima</option>
-            <option value="TO_confirmed">Tocantins</option>
-          </optgroup>
-          <optgroup label="Região Nordeste">
-            <option value="AL_confirmed">Alagoas</option>
-            <option value="BA_confirmed">Bahia</option>
-            <option value="CE_confirmed">Ceará</option>
-            <option value="MA_confirmed">Maranhão</option>
-            <option value="PB_confirmed">Paraíba</option>
-            <option value="PE_confirmed">Pernambuco</option>
-            <option value="PI_confirmed">Piauí</option>
-            <option value="RN_confirmed">Rio Grande do Norte</option>
-            <option value="SE_confirmed">Sergipe</option>
-          </optgroup>
-          <optgroup label="Região Centro-Oeste">
-            <option value="DF_confirmed">Distrito Federal</option>
-            <option value="GO_confirmed">Goiás</option>
-            <option value="MT_confirmed">Mato Grosso</option>
-            <option value="MS_confirmed">Mato Grosso do Sul</option>
-          </optgroup>
-          <optgroup label="Região Sudeste">
-            <option value="ES_confirmed">Espírito Santo</option>
-            <option value="MG_confirmed">Minas Gerais</option>
-            <option value="RJ_confirmed">Rio de Janeiro</option>
-            <option value="SP_confirmed">São Paulo</option>
-          </optgroup>
-          <optgroup label="Região Sul">
-            <option value="PR_confirmed">Paraná</option>
-            <option value="RS_confirmed">Rio Grande do Sul</option>
-            <option value="SC_confirmed">Santa Catarina</option>
-          </optgroup>
-        </select>
-        <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_per_den_per_city.png" target="_blank">
-          <img id="outros-estados-casos" class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_per_den_per_city.png" alt="confirmed_per_den_per_city" style="cursor: zoom-in;" />
-        </a>
+        <span>
+          Escolha um estado brasileiro:
+          <select class="estados-casos form-control" style="width: 33%;">
+            <optgroup label="Região Norte">
+              <option value="AC_confirmed">Acre</option>
+              <option value="AP_confirmed">Amapá</option>
+              <option value="AM_confirmed">Amazonas</option>
+              <option value="PA_confirmed">Pará</option>
+              <option value="RO_confirmed">Rondônia</option>
+              <option value="RR_confirmed">Roraima</option>
+              <option value="TO_confirmed">Tocantins</option>
+            </optgroup>
+            <optgroup label="Região Nordeste">
+              <option value="AL_confirmed">Alagoas</option>
+              <option value="BA_confirmed">Bahia</option>
+              <option value="CE_confirmed">Ceará</option>
+              <option value="MA_confirmed">Maranhão</option>
+              <option value="PB_confirmed">Paraíba</option>
+              <option value="PE_confirmed">Pernambuco</option>
+              <option value="PI_confirmed">Piauí</option>
+              <option value="RN_confirmed">Rio Grande do Norte</option>
+              <option value="SE_confirmed">Sergipe</option>
+            </optgroup>
+            <optgroup label="Região Centro-Oeste">
+              <option value="DF_confirmed">Distrito Federal</option>
+              <option value="GO_confirmed">Goiás</option>
+              <option value="MT_confirmed">Mato Grosso</option>
+              <option value="MS_confirmed">Mato Grosso do Sul</option>
+            </optgroup>
+            <optgroup label="Região Sudeste">
+              <option value="ES_confirmed">Espírito Santo</option>
+              <option value="MG_confirmed">Minas Gerais</option>
+              <option value="RJ_confirmed">Rio de Janeiro</option>
+              <option value="SP_confirmed">São Paulo</option>
+            </optgroup>
+            <optgroup label="Região Sul">
+              <option value="PR_confirmed">Paraná</option>
+              <option value="RS_confirmed">Rio Grande do Sul</option>
+              <option value="SC_confirmed">Santa Catarina</option>
+            </optgroup>
+          </select>
+        </span>
+        <br />
+        <div id="img-container-casos">
+          <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_per_den_per_city.png" target="_blank">
+            <img id="outros-estados-casos" class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_per_den_per_city.png" alt="confirmed_per_den_per_city" style="cursor: zoom-in;" />
+          </a>
+        </div>
       </div>
       <div>
         <h3>ÓBITOS</h3>
-        <p>Escolha um estado brasileiro abaixo:</p>
-        <select class="estados-mortes form-control" style="width: 33%;">
-          <optgroup label="Região Norte">
-            <option value="AC_deaths">Acre</option>
-            <option value="AP_deaths">Amapá</option>
-            <option value="AM_deaths">Amazonas</option>
-            <option value="PA_deaths">Pará</option>
-            <option value="RO_deaths">Rondônia</option>
-            <option value="RR_deaths">Roraima</option>
-            <option value="TO_deaths">Tocantins</option>
-          </optgroup>
-          <optgroup label="Região Nordeste">
-            <option value="AL_deaths">Alagoas</option>
-            <option value="BA_deaths">Bahia</option>
-            <option value="CE_deaths">Ceará</option>
-            <option value="MA_deaths">Maranhão</option>
-            <option value="PB_deaths">Paraíba</option>
-            <option value="PE_deaths">Pernambuco</option>
-            <option value="PI_deaths">Piauí</option>
-            <option value="RN_deaths">Rio Grande do Norte</option>
-            <option value="SE_deaths">Sergipe</option>
-          </optgroup>
-          <optgroup label="Região Centro-Oeste">
-            <option value="DF_deaths">Distrito Federal</option>
-            <option value="GO_deaths">Goiás</option>
-            <option value="MT_deaths">Mato Grosso</option>
-            <option value="MS_deaths">Mato Grosso do Sul</option>
-          </optgroup>
-          <optgroup label="Região Sudeste">
-            <option value="ES_deaths">Espírito Santo</option>
-            <option value="MG_deaths">Minas Gerais</option>
-            <option value="RJ_deaths">Rio de Janeiro</option>
-            <option value="SP_deaths">São Paulo</option>
-          </optgroup>
-          <optgroup label="Região Sul">
-            <option value="PR_deaths">Paraná</option>
-            <option value="RS_deaths">Rio Grande do Sul</option>
-            <option value="SC_deaths">Santa Catarina</option>
-          </optgroup>
-        </select>
-        <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_per_den_per_city.png" target="_blank">
-          <img id="outros-estados-mortes" class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_per_den_per_city.png" alt="confirmed_per_den_per_city" style="cursor: zoom-in;" />
-        </a>
+        <span>
+          Escolha um estado brasileiro:
+          <select class="estados-mortes form-control" style="width: 33%;">
+            <optgroup label="Região Norte">
+              <option value="AC_deaths">Acre</option>
+              <option value="AP_deaths">Amapá</option>
+              <option value="AM_deaths">Amazonas</option>
+              <option value="PA_deaths">Pará</option>
+              <option value="RO_deaths">Rondônia</option>
+              <option value="RR_deaths">Roraima</option>
+              <option value="TO_deaths">Tocantins</option>
+            </optgroup>
+            <optgroup label="Região Nordeste">
+              <option value="AL_deaths">Alagoas</option>
+              <option value="BA_deaths">Bahia</option>
+              <option value="CE_deaths">Ceará</option>
+              <option value="MA_deaths">Maranhão</option>
+              <option value="PB_deaths">Paraíba</option>
+              <option value="PE_deaths">Pernambuco</option>
+              <option value="PI_deaths">Piauí</option>
+              <option value="RN_deaths">Rio Grande do Norte</option>
+              <option value="SE_deaths">Sergipe</option>
+            </optgroup>
+            <optgroup label="Região Centro-Oeste">
+              <option value="DF_deaths">Distrito Federal</option>
+              <option value="GO_deaths">Goiás</option>
+              <option value="MT_deaths">Mato Grosso</option>
+              <option value="MS_deaths">Mato Grosso do Sul</option>
+            </optgroup>
+            <optgroup label="Região Sudeste">
+              <option value="ES_deaths">Espírito Santo</option>
+              <option value="MG_deaths">Minas Gerais</option>
+              <option value="RJ_deaths">Rio de Janeiro</option>
+              <option value="SP_deaths">São Paulo</option>
+            </optgroup>
+            <optgroup label="Região Sul">
+              <option value="PR_deaths">Paraná</option>
+              <option value="RS_deaths">Rio Grande do Sul</option>
+              <option value="SC_deaths">Santa Catarina</option>
+            </optgroup>
+          </select>
+        </span>
+        <br />
+        <div id="img-container-mortes">
+          <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_per_den_per_city.png" target="_blank">
+            <img id="outros-estados-mortes" class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_per_den_per_city.png" alt="confirmed_per_den_per_city" style="cursor: zoom-in;" />
+          </a>
+        </div>
       </div>
     </div>
   </div>
