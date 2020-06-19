@@ -205,7 +205,7 @@ layout: default
       <h3 id="wanim-casos">CASOS</h3>
       <span>
         Selecione o tipo de animação:
-        <select id="wcombo" style="width: 45%;">
+        <select id="wcombo" style="width: 55%;">
           <option value="cases">Casos</option>
           <option value="cases_per_mil">Casos por milhão</option>
           <option value="deaths">Óbitos</option>
@@ -225,7 +225,7 @@ layout: default
       <div>
         <h3>CASOS</h3>
         <span>
-          <select id="estados-casos" style="width: 45%;">
+          <select id="estados-casos" style="width: 55%;">
             <optgroup label="Região Norte">
               <option value="AC_confirmed">Acre</option>
               <option value="AP_confirmed">Amapá</option>
@@ -276,7 +276,7 @@ layout: default
       <div>
         <h3>ÓBITOS</h3>
         <span>
-          <select id="estados-mortes" style="width: 45%;">
+          <select id="estados-mortes" style="width: 55%;">
             <optgroup label="Região Norte">
               <option value="AC_deaths">Acre</option>
               <option value="AP_deaths">Amapá</option>
@@ -404,23 +404,23 @@ layout: default
     $("#estados-casos, #estados-mortes, #wcombo").select2({
       width: "resolve",
     });
-  });
-  // onchange load images or videos
-  $("#estados-casos").change(function () {
-    val = $(this).val();
-    $("#outros-estados-casos").attr("src", baseUrl + imgUrls[val]);
-    $("#outros-estados-casos-link").attr("href", baseUrl + imgUrls[val]);
-  });
-  $("#estados-mortes").change(function () {
-    val = $(this).val();
-    $("#outros-estados-mortes").attr("src", baseUrl + imgUrls[val]);
-    $("#outros-estados-mortes-link").attr("href", baseUrl + imgUrls[val]);
-  });
-  $("#wcombo").change(function () {
-    val = $(this).val();
-    $("#wsource").attr("src", baseUrl + vidUrls[val]);
-    $("#wlink").attr("href", baseUrl + vidUrls[val]);
-    $("#wvideo").load();
-    $("#wvideo").play();
+    // onchange load images or videos
+    $("#estados-casos").change(function () {
+      val = $(this).val();
+      $("#outros-estados-casos").attr("src", baseUrl + imgUrls[val]);
+      $("#outros-estados-casos-link").attr("href", baseUrl + imgUrls[val]);
+    });
+    $("#estados-mortes").change(function () {
+      val = $(this).val();
+      $("#outros-estados-mortes").attr("src", baseUrl + imgUrls[val]);
+      $("#outros-estados-mortes-link").attr("href", baseUrl + imgUrls[val]);
+    });
+    $("#wcombo").change(function () {
+      val = $(this).val();
+      $("#wsource").attr("src", baseUrl + vidUrls[val]);
+      $("#wlink").attr("href", baseUrl + vidUrls[val]);
+      $("#wvideo").load();
+      $("#wvideo").play();
+    });
   });
 </script>
