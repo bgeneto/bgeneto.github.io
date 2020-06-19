@@ -3,25 +3,25 @@ layout: default
 ---
 
 <div id="container" class="container">
-  <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+  <ul class="nav nav-pills nav-fill" id="myTab" role="tablist">
     <li class="nav-item">
-      <a class="nav-link active" id="tabs-brasil-graficos-tab" data-toggle="tab" href="#tabs-brasil-graficos" role="tab" aria-controls="tabs-brasil-graficos" aria-selected="true">Brasil: gráficos</a>
+      <a class="nav-link active" id="pills-brasil-graficos-tab" data-toggle="pill" href="#pills-brasil-graficos" role="tab" aria-controls="pills-brasil-graficos" aria-selected="true">Brasil: gráficos</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="tabs-brasil-animacoes-tab" data-toggle="tab" href="#tabs-brasil-animacoes" role="tab" aria-controls="tabs-brasil-animacoes" aria-selected="true">Brasil: animações</a>
+      <a class="nav-link" id="pills-brasil-animacoes-tab" data-toggle="pill" href="#pills-brasil-animacoes" role="tab" aria-controls="pills-brasil-animacoes" aria-selected="true">Brasil: animações</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="tabs-mundo-graficos-tab" data-toggle="tab" href="#tabs-mundo-graficos" role="tab" aria-controls="tabs-mundo-graficos" aria-selected="false">Mundo: gráficos</a>
+      <a class="nav-link" id="pills-mundo-graficos-tab" data-toggle="pill" href="#pills-mundo-graficos" role="tab" aria-controls="pills-mundo-graficos" aria-selected="false">Mundo: gráficos</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="tabs-mundo-animacoes-tab" data-toggle="tab" href="#tabs-mundo-animacoes" role="tab" aria-controls="tabs-mundo-animacoes" aria-selected="false">Mundo: animações</a>
+      <a class="nav-link" id="pills-mundo-animacoes-tab" data-toggle="pill" href="#pills-mundo-animacoes" role="tab" aria-controls="pills-mundo-animacoes" aria-selected="false">Mundo: animações</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="tabs-outros-graficos-tab" data-toggle="tab" href="#tabs-outros-graficos" role="tab" aria-controls="tabs-outros-graficos" aria-selected="false">Outros: gráficos</a>
+      <a class="nav-link" id="pills-outros-graficos-tab" data-toggle="pill" href="#pills-outros-graficos" role="tab" aria-controls="pills-outros-graficos" aria-selected="false">Outros: gráficos</a>
     </li>
   </ul>
-  <div class="tab-content" id="tabs-tabContent">
-    <div class="tab-pane fade show active" id="tabs-brasil-graficos" role="tabpanel" aria-labelledby="tabs-brasil-graficos-tab">
+  <div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-brasil-graficos" role="tabpanel" aria-labelledby="pills-brasil-graficos-tab">
       <br />
       <ul>
         <li><a href="#graf-casos">Gráficos: casos</a></li>
@@ -72,7 +72,7 @@ layout: default
       </a>
     </div>
 
-    <div class="tab-pane fade" id="tabs-brasil-animacoes" role="tabpanel" aria-labelledby="tabs-brasil-animacoes-tab">
+    <div class="tab-pane fade" id="pills-brasil-animacoes" role="tabpanel" aria-labelledby="pills-brasil-animacoes-tab">
       <br />
       <ul>
         <li><a href="#anim-casos">Animações: casos</a></li>
@@ -170,7 +170,7 @@ layout: default
       <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_mil_animated_city.mp4" target="_blank">download</a>
     </div>
 
-    <div class="tab-pane fade" id="tabs-mundo-graficos" role="tabpanel" aria-labelledby="tabs-mundo-graficos-tab">
+    <div class="tab-pane fade" id="pills-mundo-graficos" role="tabpanel" aria-labelledby="pills-mundo-graficos-tab">
       <br />
       <ul>
         <li><a href="#wgraf-casos">Gráficos: casos</a></li>
@@ -200,7 +200,7 @@ layout: default
       </a>
     </div>
 
-    <div class="tab-pane fade" id="tabs-mundo-animacoes" role="tabpanel" aria-labelledby="tabs-mundo-animacoes-tab">
+    <div class="tab-pane fade" id="pills-mundo-animacoes" role="tabpanel" aria-labelledby="pills-mundo-animacoes-tab">
       <br />
       <h3 id="wanim-casos">CASOS</h3>
       <span>
@@ -220,7 +220,7 @@ layout: default
       <a id="wlink" href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=cases_animated_pt.mp4" target="_blank">download</a>
     </div>
 
-    <div class="tab-pane fade" id="tabs-outros-graficos" role="tabpanel" aria-labelledby="tabs-outros-graficos-tab">
+    <div class="tab-pane fade" id="pills-outros-graficos" role="tabpanel" aria-labelledby="pills-outros-graficos-tab">
       <br />
       <div>
         <h3>CASOS</h3>
@@ -395,7 +395,7 @@ layout: default
   }
     
   $(function () {
-    // activate tabs 
+    // activate pills 
     $("#myTab a").on("click", function (e) {
       e.preventDefault();
       $(this).tab("show");
@@ -419,8 +419,8 @@ layout: default
       val = $(this).val();
       $("#wsource").attr("src", baseUrl + vidUrls[val]);
       $("#wlink").attr("href", baseUrl + vidUrls[val]);
-      $("#wvideo").load();
-      $("#wvideo").play();
+      $("#wvideo").get(0).load();
+      $("#wvideo").get(0).play();
     });
   });
 </script>
