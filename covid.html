@@ -202,42 +202,22 @@ layout: default
 
     <div class="tab-pane fade" id="tabs-mundo-animacoes" role="tabpanel" aria-labelledby="tabs-mundo-animacoes-tab">
       <br />
-      <ul>
-        <li><a href="#wanim-casos">Animações: casos</a></li>
-        <li><a href="#wanim-obitos">Animações: óbitos</a></li>
-      </ul>
-
       <h3 id="wanim-casos">CASOS</h3>
-
-      <h4>Número total de <b>casos</b> por <b>país</b></h4>
+      <span>
+        Selecione o tipo de animação:
+        <select id="wcombo form-control" style="width: 45%;">
+          <option value="cases">Número de Casos</option>
+          <option value="cases_per_mil">Número de Casos por Milhão</option>
+          <option value="deaths">Número de Óbitos</option>
+          <option value="deaths_per_mil">Número de Óbitos por Milhão</option>          
+        </select>  
+      </span>
+      <br /><br />
       <video height="560" controls>
-        <source src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=cases_animated_pt.mp4" type="video/mp4" />
+        <source id="wvideo" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=cases_animated_pt.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=cases_animated_pt.mp4" target="_blank">download</a>
-
-      <h4>Número total de <b>casos</b> por <b>milhão de habitantes</b></h4>
-      <video height="560" controls>
-        <source src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=cases_per_mil_animated_pt.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=cases_per_mil_animated_pt.mp4" target="_blank">download</a>
-
-      <h3 id="wanim-obitos">ÓBITOS</h3>
-
-      <h4>Número total de <b>óbitos</b> por <b>país</b></h4>
-      <video height="560" controls>
-        <source src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_animated_pt.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_animated_pt.mp4" target="_blank">download</a>
-
-      <h4>Número total de <b>óbitos</b> por <b>milhão de habitantes</b></h4>
-      <video height="560" controls>
-        <source src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_mil_animated_pt.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_mil_animated_pt.mp4" target="_blank">download</a>
+      <a id="wlink" href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=cases_animated_pt.mp4" target="_blank">download</a>
     </div>
 
     <div class="tab-pane fade" id="tabs-outros-graficos" role="tabpanel" aria-labelledby="tabs-outros-graficos-tab">
@@ -245,7 +225,7 @@ layout: default
       <div>
         <h3>CASOS</h3>
         <span>
-          <select class="estados-casos form-control" style="width: 33%;">
+          <select id="estados-casos form-control" style="width: 45%;">
             <optgroup label="Região Norte">
               <option value="AC_confirmed">Acre</option>
               <option value="AP_confirmed">Amapá</option>
@@ -296,7 +276,7 @@ layout: default
       <div>
         <h3>ÓBITOS</h3>
         <span>
-          <select class="estados-mortes form-control" style="width: 33%;">
+          <select id="estados-mortes form-control" style="width: 45%;">
             <optgroup label="Região Norte">
               <option value="AC_deaths">Acre</option>
               <option value="AP_deaths">Amapá</option>
@@ -406,21 +386,38 @@ layout: default
     PI_deaths: "PI_deaths_historical.png",
     SP_confirmed: "SP_confirmed_historical.png",
   };
+  
+  var vidUrls = {
+    cases: "https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=cases_animated_pt.mp4",
+    cases_per_mil: "https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=cases_per_mil_animated_pt.mp4",
+    deaths: "https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_animated_pt.mp4",
+    deaths_per_mil: "https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_mil_animated_pt.mp4"
+  }
+    
   $(function () {
-    $(".estados-casos").select2({
-      width: "resolve",
-    });
+    // activate tabs 
     $("#myTab a").on("click", function (e) {
       e.preventDefault();
       $(this).tab("show");
     });
+    // activate select2 comboboxes
+    $("#estados-casos, #estados-mortes, #wcombo, #brcombo").select2({
+      width: "resolve",
+    });
+    // onchange load images or videos
+    $("#estados-casos").change(function () {
+      val = $("#estados-casos").val();
+      $("#outros-estados-casos").attr("src", baseUrl + imgUrls[val]);
+    });
+    $("#estados-mortes").change(function () {
+      val = $("#estados-mortes").val();
+      $("#outros-estados-mortes").attr("src", baseUrl + imgUrls[val]);
+    });
+    $("#wcombo").change(function () {
+      val = $this.val();
+      $("#wvideo").attr("src", baseUrl + vidUrls[val]);
+      $("#wlink").attr("src", baseUrl + vidUrls[val]);
+    });    
   });
-  $(".estados-casos").change(function () {
-    val = $(".estados-casos").val();
-    $("#outros-estados-casos").attr("src", baseUrl + imgUrls[val]);
-  });
-  $(".estados-mortes").change(function () {
-    val = $(".estados-mortes").val();
-    $("#outros-estados-mortes").attr("src", baseUrl + imgUrls[val]);
-  });
+  
 </script>
