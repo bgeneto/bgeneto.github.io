@@ -60,100 +60,45 @@ layout: default
 
     <div class="tab-pane fade" id="pills-brasil-animacoes" role="tabpanel" aria-labelledby="pills-brasil-animacoes-tab">
       <br />
-      <ul>
-        <li><a href="#anim-casos">Animações: casos</a></li>
-        <li><a href="#anim-obitos">Animações: óbitos</a></li>
-      </ul>
 
       <h3 id="anim-casos">CASOS</h3>
-
-      <h4>Número total de <b>casos</b> por <b>estado</b></h4>
-      <video height="560" controls>
-        <source src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_animated_state.mp4" type="video/mp4" />
+      <span>
+        Selecione o tipo de animação:
+        <select id="br-casos-combo-anim" style="width: 55%;">
+          <option value="confirmed_animated_state">Casos (estados)</option>
+          <option value="confirmed_animated_city">Casos (capitais)</option>
+          <option value="confirmed_per_mil_animated_state">Casos por milhão (estados)</option>
+          <option value="confirmed_per_mil_animated_city">Casos por milhão (capitais)</option>
+          <option value="confirmed_per_den_animated_state">Casos por densidade (estados)</option>
+          <option value="confirmed_per_den_animated_city">Casos por densidade (capitais)</option> 
+        </select>  
+      </span>
+      <br /><br />
+      <video id="br-casos-video" height="560" controls>
+        <source id="br-casos-source" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_animated_state.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_animated_state.mp4" target="_blank">download</a>
-
-      <h4>Número total de <b>casos</b> por <b>cidade</b></h4>
-      <video height="560" controls>
-        <source src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_animated_city.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_animated_city.mp4" target="_blank">download</a>
-
-      <h4>Número total de <b>casos</b> por <em>densidade demográfica</em> nos <b>estados</b></h4>
-      <video height="560" controls>
-        <source src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_per_den_animated_state.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_per_den_animated_state.mp4" target="_blank">download</a>
-
-      <h4>Número total de <b>casos</b> por <em>densidade demográfica</em> nas <b>cidades</b></h4>
-
-      <video height="560" controls>
-        <source src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_per_den_animated_city.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_per_den_animated_city.mp4" target="_blank">download</a>
-
-      <h4>Número total de <b>casos</b> por <em>milhão de habitantes</em> nos <b>estados</b></h4>
-      <video height="560" controls>
-        <source src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_per_mil_animated_state.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_per_mil_animated_state.mp4" target="_blank">download</a>
-
-      <h4>Número total de <b>casos</b> por <em>milhão de habitantes</em> nas <b>cidades</b></h4>
-      <video height="560" controls>
-        <source src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_per_mil_animated_city.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_per_mil_animated_city.mp4" target="_blank">download</a>
+      <a id="br-casos-link" href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_animated_state.mp4" target="_blank">download</a>
 
       <h3 id="anim-obitos">ÓBITOS</h3>
-
-      <h4>Número total de <b>óbitos</b> por <b>estado</b></h4>
-      <video height="560" controls>
-        <source src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_animated_state.mp4" type="video/mp4" />
+      <span>
+        Selecione o tipo de animação:
+        <select id="br-mortes-combo-anim" style="width: 55%;">
+          <option value="deaths_animated_state">Óbitos (estados)</option>
+          <option value="deaths_animated_city">Óbitos (capitais)</option>
+          <option value="deaths_per_mil_animated_state">Óbitos por milhão (estados)</option>
+          <option value="deaths_per_mil_animated_city">Óbitos por milhão (capitais)</option>
+          <option value="deaths_per_den_animated_state">Óbitos por densidade (estados)</option>
+          <option value="deaths_per_den_animated_city">Óbitos por densidade (capitais)</option> 
+        </select>  
+      </span>
+      <br /><br />
+      <video id="br-mortes-video" height="560" controls>
+        <source id="br-mortes-source" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_animated_state.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_animated_state.mp4" target="_blank">download</a>
-
-      <h4>Número total de <b>óbitos</b> por <b>cidade</b></h4>
-      <video height="560" controls>
-        <source src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_animated_city.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_animated_city.mp4" target="_blank">download</a>
-
-      <h4>Número total de <b>óbitos</b> por <em>densidade demográfica</em> nos <b>estados</b></h4>
-      <video height="560" controls>
-        <source src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_den_animated_state.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_den_animated_state.mp4" target="_blank">download</a>
-
-      <h4>Número total de <b>óbitos</b> por <em>densidade demográfica</em> nas <b>cidades</b></h4>
-
-      <video height="560" controls>
-        <source src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_den_animated_city.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_den_animated_city.mp4" target="_blank">download</a>
-
-      <h4>Número total de <b>óbitos</b> por <em>milhão de habitantes</em> nos <b>estados</b></h4>
-      <video height="560" controls>
-        <source src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_mil_animated_state.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_mil_animated_state.mp4" target="_blank">download</a>
-
-      <h4>Número total de <b>óbitos</b> por <em>milhão de habitantes</em> nas <b>cidades</b></h4>
-      <video height="560" controls>
-        <source src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_mil_animated_city.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_mil_animated_city.mp4" target="_blank">download</a>
+      <a id="br-mortes-link" href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_animated_state.mp4" target="_blank">download</a>
+    
     </div>
 
     <div class="tab-pane fade" id="pills-mundo-graficos" role="tabpanel" aria-labelledby="pills-mundo-graficos-tab">
@@ -388,7 +333,7 @@ layout: default
       $(this).tab("show");
     });
     // activate select2 comboboxes
-    $("#estados-casos, #estados-mortes, #wcombo").select2({
+    $("#estados-casos, #estados-mortes).select2({
       width: "resolve",
     });
     // onchange load images or videos
@@ -421,5 +366,12 @@ layout: default
       $("#wvideo").get(0).load();
       $("#wvideo").get(0).play();
     });
+    $("#br-casos-combo-anim").change(function () {
+      val = $(this).val();
+      $("#br-casos-combo-source").attr("src", baseUrl + val + ".mp4");
+      $("#br-casos-combo-link").attr("href", baseUrl + val + ".mp4");
+      $("#br-casos-combo-video").get(0).load();
+      $("#br-casos-combo-video").get(0).play();
+    });    
   });
 </script>
