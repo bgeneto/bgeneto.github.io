@@ -206,15 +206,15 @@ layout: default
       <span>
         Selecione o tipo de animação:
         <select id="wcombo" style="width: 45%;">
-          <option value="cases">Número de Casos</option>
-          <option value="cases_per_mil">Número de Casos por Milhão</option>
-          <option value="deaths">Número de Óbitos</option>
-          <option value="deaths_per_mil">Número de Óbitos por Milhão</option>          
+          <option value="cases">Casos</option>
+          <option value="cases_per_mil">Casos por milhão</option>
+          <option value="deaths">Óbitos</option>
+          <option value="deaths_per_mil">Óbitos por milhão</option>          
         </select>  
       </span>
       <br /><br />
-      <video height="560" controls>
-        <source id="wvideo" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=cases_animated_pt.mp4" type="video/mp4" />
+      <video id="wvideo" height="560" controls>
+        <source id="wsource" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=cases_animated_pt.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <a id="wlink" href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=cases_animated_pt.mp4" target="_blank">download</a>
@@ -388,10 +388,10 @@ layout: default
   };
   
   var vidUrls = {
-    cases: "https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=cases_animated_pt.mp4",
-    cases_per_mil: "https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=cases_per_mil_animated_pt.mp4",
-    deaths: "https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_animated_pt.mp4",
-    deaths_per_mil: "https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_mil_animated_pt.mp4"
+    cases: "cases_animated_pt.mp4",
+    cases_per_mil: "cases_per_mil_animated_pt.mp4",
+    deaths: "deaths_animated_pt.mp4",
+    deaths_per_mil: "deaths_per_mil_animated_pt.mp4"
   }
     
   $(function () {
@@ -418,7 +418,9 @@ layout: default
   });
   $("#wcombo").change(function () {
     val = $(this).val();
-    $("#wvideo").attr("src", baseUrl + vidUrls[val]);
+    $("#wsource").attr("src", baseUrl + vidUrls[val]);
     $("#wlink").attr("href", baseUrl + vidUrls[val]);
-  });   
+    $("#wvideo").load();
+    $("#wvideo").play();
+  });
 </script>
