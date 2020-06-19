@@ -243,7 +243,7 @@ layout: default
     <div class="tab-pane fade" id="tabs-outros-graficos" role="tabpanel" aria-labelledby="tabs-outros-graficos-tab">
       <br />
       <p>Escolha um estado brasileiro abaixo:</p>
-      <select class="estados form-control">
+      <select class="estados form-control" style="width: 33%">
         <optgroup label="Região Norte">
           <option value="AC">Acre</option>
           <option value="AP">Amapá</option>
@@ -286,7 +286,9 @@ layout: default
 <br />
 <script>
   $(function () {
-    $(".estados").select2();
+    $('.estados').select2({
+      width: 'resolve'
+    });
     $("#myTab a").on("click", function (e) {
       e.preventDefault();
       $(this).tab("show");
