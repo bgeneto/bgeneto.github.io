@@ -60,45 +60,30 @@ layout: default
 
     <div class="tab-pane fade" id="pills-brasil-animacoes" role="tabpanel" aria-labelledby="pills-brasil-animacoes-tab">
       <br />
-
-      <h3 id="anim-casos">CASOS</h3>
       <span>
         Selecione o tipo de animação:
-        <select id="br-casos-anim-combo" style="width: 55%;">
+        <select id="br-anim-combo" style="width: 55%;">
           <option value="confirmed_animated_state">Casos (estados)</option>
           <option value="confirmed_animated_city">Casos (capitais)</option>
           <option value="confirmed_per_mil_animated_state">Casos por milhão (estados)</option>
           <option value="confirmed_per_mil_animated_city">Casos por milhão (capitais)</option>
           <option value="confirmed_per_den_animated_state">Casos por densidade (estados)</option>
           <option value="confirmed_per_den_animated_city">Casos por densidade (capitais)</option> 
-        </select>  
-      </span>
-      <br /><br />
-      <video id="br-casos-anim-video" height="560" controls>
-        <source id="br-casos-anim-source" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_animated_state.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <a id="br-casos-anim-link" href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_animated_state.mp4" target="_blank">download</a>
-
-      <h3 id="anim-obitos">ÓBITOS</h3>
-      <span>
-        Selecione o tipo de animação:
-        <select id="br-mortes-anim-combo" style="width: 55%;">
           <option value="deaths_animated_state">Óbitos (estados)</option>
           <option value="deaths_animated_city">Óbitos (capitais)</option>
           <option value="deaths_per_mil_animated_state">Óbitos por milhão (estados)</option>
           <option value="deaths_per_mil_animated_city">Óbitos por milhão (capitais)</option>
           <option value="deaths_per_den_animated_state">Óbitos por densidade (estados)</option>
-          <option value="deaths_per_den_animated_city">Óbitos por densidade (capitais)</option> 
+          <option value="deaths_per_den_animated_city">Óbitos por densidade (capitais)</option>           
         </select>  
       </span>
       <br /><br />
-      <video id="br-mortes-anim-video" height="560" controls>
-        <source id="br-mortes-anim-source" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_animated_state.mp4" type="video/mp4" />
+      <video id="br-anim-video" height="560" controls>
+        <source id="br-anim-source" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_animated_state.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <a id="br-mortes-anim-link" href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_animated_state.mp4" target="_blank">download</a>
-    
+      <a id="br-anim-link" href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_animated_state.mp4" target="_blank">download</a>
+
     </div>
 
     <div class="tab-pane fade" id="pills-mundo-graficos" role="tabpanel" aria-labelledby="pills-mundo-graficos-tab">
@@ -260,7 +245,8 @@ layout: default
 
 <script>
   var baseUrl = "https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=";
-
+  var viewUrl = "https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o#/files_mediaviewer/";
+  
   var imgUrls = {
     AC_confirmed: "AC_confirmed_historical.png",
     GO_deaths: "GO_deaths_historical.png",
@@ -339,24 +325,24 @@ layout: default
     $("#estados-casos").change(function () {
       val = $(this).val();
       $("#outros-estados-casos").attr("src", baseUrl + imgUrls[val]);
-      $("#outros-estados-casos-link").attr("href", baseUrl + imgUrls[val]);
+      $("#outros-estados-casos-link").attr("href", viewUrl + imgUrls[val]);
     });
     $("#estados-mortes").change(function () {
       val = $(this).val();
       $("#outros-estados-mortes").attr("src", baseUrl + imgUrls[val]);
-      $("#outros-estados-mortes-link").attr("href", baseUrl + imgUrls[val]);
+      $("#outros-estados-mortes-link").attr("href", viewUrl + imgUrls[val]);
     });
     // Brasil: casos
     $("#br-casos-combo").change(function () {
       val = $(this).val();
       $("#br-casos-img").attr("src", baseUrl + val + ".png");
-      $("#br-casos-link").attr("href", baseUrl + val + ".png");
+      $("#br-casos-link").attr("href", viewUrl + val + ".png");
     });
     // Brasil: óbitos
     $("#br-mortes-combo").change(function () {
       val = $(this).val();
       $("#br-mortes-img").attr("src", baseUrl + val + ".png");
-      $("#br-mortes-link").attr("href", baseUrl + val + ".png");
+      $("#br-mortes-link").attr("href", viewUrl + val + ".png");
     });    
     $("#wcombo").change(function () {
       val = $(this).val();
@@ -365,19 +351,12 @@ layout: default
       $("#wvideo").get(0).load();
       $("#wvideo").get(0).play();
     });
-    $("#br-casos-anim-combo").change(function () {
+    $("#br-anim-combo").change(function () {
       val = $(this).val();
-      $("#br-casos-anim-source").attr("src", baseUrl + val + ".mp4");
-      $("#br-casos-anim-link").attr("href", baseUrl + val + ".mp4");
-      $("#br-casos-anim-video").get(0).load();
-      $("#br-casos-anim-video").get(0).play();
+      $("#br-anim-source").attr("src", baseUrl + val + ".mp4");
+      $("#br-anim-link").attr("href", baseUrl + val + ".mp4");
+      $("#br-anim-video").get(0).load();
+      $("#br-anim-video").get(0).play();
     });    
-    $("#br-mortes-anim-combo").change(function () {
-      val = $(this).val();
-      $("#br-mortes-anim-source").attr("src", baseUrl + val + ".mp4");
-      $("#br-mortes-anim-link").attr("href", baseUrl + val + ".mp4");
-      $("#br-mortes-anim-video").get(0).load();
-      $("#br-mortes-anim-video").get(0).play();
-    });       
   });
 </script>
