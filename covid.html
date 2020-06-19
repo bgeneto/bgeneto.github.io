@@ -414,7 +414,7 @@ layout: default
       $("#outros-estados-mortes").attr("src", baseUrl + imgUrls[val]);
     });
     $("#wcombo").change(function () {
-      val = $this.val();
+      val = $(this).val();
       $("#wvideo").attr("src", baseUrl + vidUrls[val]);
       $("#wlink").attr("src", baseUrl + vidUrls[val]);
     });    
