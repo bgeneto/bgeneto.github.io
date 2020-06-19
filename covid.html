@@ -242,57 +242,175 @@ layout: default
 
     <div class="tab-pane fade" id="tabs-outros-graficos" role="tabpanel" aria-labelledby="tabs-outros-graficos-tab">
       <br />
-      <p class="teste">Escolha um estado brasileiro abaixo:</p>
-      <select class="estados form-control" style="width: 33%">
-        <optgroup label="Região Norte">
-          <option value="AC">Acre</option>
-          <option value="AP">Amapá</option>
-          <option value="AM">Amazonas</option>
-          <option value="PA">Pará</option>
-          <option value="RO">Rondônia</option>
-          <option value="RR">Roraima</option>
-          <option value="TO">Tocantins</option>
-        </optgroup>
-        <optgroup label="Região Nordeste">
-          <option value="AL">Alagoas</option>
-          <option value="BA">Bahia</option>
-          <option value="CE">Ceará</option>
-          <option value="MA">Maranhão</option>
-          <option value="PB">Paraíba</option>
-          <option value="PE">Pernambuco</option>
-          <option value="PI">Piauí</option>
-          <option value="RN">Rio Grande do Norte</option>
-          <option value="SE">Sergipe</option>
-        </optgroup>
-        <optgroup label="Região Centro-Oeste">
-          <option value="GO">Goiás</option>
-          <option value="MT">Mato Grosso</option>
-          <option value="MS">Mato Grosso do Sul</option>
-        </optgroup>
-        <optgroup label="Região Sudeste">
-          <option value="ES">Espírito Santo</option>
-          <option value="MG">Minas Gerais</option>
-          <option value="RJ">Rio de Janeiro</option>
-          <option value="SP">São Paulo</option>
-        </optgroup>
-        <optgroup label="Região Sul">
-          <option value="PR">Paraná</option>
-          <option value="RS">Rio Grande do Sul</option>
-          <option value="SC">Santa Catarina</option>
-        </optgroup>
-      </select>
+      <div>
+        <h3>CASOS</h3>
+        <p>Escolha um estado brasileiro abaixo:</p>
+        <select class="estados-casos form-control" style="width: 33%;">
+          <optgroup label="Região Norte">
+            <option value="AC_confirmed">Acre</option>
+            <option value="AP_confirmed">Amapá</option>
+            <option value="AM_confirmed">Amazonas</option>
+            <option value="PA_confirmed">Pará</option>
+            <option value="RO_confirmed">Rondônia</option>
+            <option value="RR_confirmed">Roraima</option>
+            <option value="TO_confirmed">Tocantins</option>
+          </optgroup>
+          <optgroup label="Região Nordeste">
+            <option value="AL_confirmed">Alagoas</option>
+            <option value="BA_confirmed">Bahia</option>
+            <option value="CE_confirmed">Ceará</option>
+            <option value="MA_confirmed">Maranhão</option>
+            <option value="PB_confirmed">Paraíba</option>
+            <option value="PE_confirmed">Pernambuco</option>
+            <option value="PI_confirmed">Piauí</option>
+            <option value="RN_confirmed">Rio Grande do Norte</option>
+            <option value="SE_confirmed">Sergipe</option>
+          </optgroup>
+          <optgroup label="Região Centro-Oeste">
+            <option value="DF_confirmed">Distrito Federal</option>
+            <option value="GO_confirmed">Goiás</option>
+            <option value="MT_confirmed">Mato Grosso</option>
+            <option value="MS_confirmed">Mato Grosso do Sul</option>
+          </optgroup>
+          <optgroup label="Região Sudeste">
+            <option value="ES_confirmed">Espírito Santo</option>
+            <option value="MG_confirmed">Minas Gerais</option>
+            <option value="RJ_confirmed">Rio de Janeiro</option>
+            <option value="SP_confirmed">São Paulo</option>
+          </optgroup>
+          <optgroup label="Região Sul">
+            <option value="PR_confirmed">Paraná</option>
+            <option value="RS_confirmed">Rio Grande do Sul</option>
+            <option value="SC_confirmed">Santa Catarina</option>
+          </optgroup>
+        </select>
+        <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_per_den_per_city.png" target="_blank">
+          <img id="outros-estados-casos" class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_per_den_per_city.png" alt="confirmed_per_den_per_city" style="cursor: zoom-in;" />
+        </a>
+      </div>
+      <div>
+        <h3>ÓBITOS</h3>
+        <p>Escolha um estado brasileiro abaixo:</p>
+        <select class="estados-mortes form-control" style="width: 33%;">
+          <optgroup label="Região Norte">
+            <option value="AC_deaths">Acre</option>
+            <option value="AP_deaths">Amapá</option>
+            <option value="AM_deaths">Amazonas</option>
+            <option value="PA_deaths">Pará</option>
+            <option value="RO_deaths">Rondônia</option>
+            <option value="RR_deaths">Roraima</option>
+            <option value="TO_deaths">Tocantins</option>
+          </optgroup>
+          <optgroup label="Região Nordeste">
+            <option value="AL_deaths">Alagoas</option>
+            <option value="BA_deaths">Bahia</option>
+            <option value="CE_deaths">Ceará</option>
+            <option value="MA_deaths">Maranhão</option>
+            <option value="PB_deaths">Paraíba</option>
+            <option value="PE_deaths">Pernambuco</option>
+            <option value="PI_deaths">Piauí</option>
+            <option value="RN_deaths">Rio Grande do Norte</option>
+            <option value="SE_deaths">Sergipe</option>
+          </optgroup>
+          <optgroup label="Região Centro-Oeste">
+            <option value="DF_deaths">Distrito Federal</option>
+            <option value="GO_deaths">Goiás</option>
+            <option value="MT_deaths">Mato Grosso</option>
+            <option value="MS_deaths">Mato Grosso do Sul</option>
+          </optgroup>
+          <optgroup label="Região Sudeste">
+            <option value="ES_deaths">Espírito Santo</option>
+            <option value="MG_deaths">Minas Gerais</option>
+            <option value="RJ_deaths">Rio de Janeiro</option>
+            <option value="SP_deaths">São Paulo</option>
+          </optgroup>
+          <optgroup label="Região Sul">
+            <option value="PR_deaths">Paraná</option>
+            <option value="RS_deaths">Rio Grande do Sul</option>
+            <option value="SC_deaths">Santa Catarina</option>
+          </optgroup>
+        </select>
+        <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_per_den_per_city.png" target="_blank">
+          <img id="outros-estados-mortes" class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_per_den_per_city.png" alt="confirmed_per_den_per_city" style="cursor: zoom-in;" />
+        </a>
+      </div>
     </div>
   </div>
 </div>
 <br />
 <script>
+  var baseUrl = "https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=";
+  var imgUrls = {
+    AC_confirmed: "AC_confirmed_historical.png",
+    GO_deaths: "GO_deaths_historical.png",
+    PR_confirmed: "PR_confirmed_historical.png",
+    SP_deaths: "SP_deaths_historical.png",
+    AC_deaths: "AC_deaths_historical.png",
+    MA_confirmed: "MA_confirmed_historical.png",
+    PR_deaths: "PR_deaths_historical.png",
+    TO_confirmed: "TO_confirmed_historical.png",
+    AL_confirmed: "AL_confirmed_historical.png",
+    MA_deaths: "MA_deaths_historical.png",
+    RJ_confirmed: "RJ_confirmed_historical.png",
+    TO_deaths: "TO_deaths_historical.png",
+    AL_deaths: "AL_deaths_historical.png",
+    MG_confirmed: "MG_confirmed_historical.png",
+    RJ_deaths: "RJ_deaths_historical.png",
+    AM_confirmed: "AM_confirmed_historical.png",
+    MG_deaths: "MG_deaths_historical.png",
+    RN_confirmed: "RN_confirmed_historical.png",
+    AM_deaths: "AM_deaths_historical.png",
+    MS_confirmed: "MS_confirmed_historical.png",
+    RN_deaths: "RN_deaths_historical.png",
+    AP_confirmed: "AP_confirmed_historical.png",
+    MS_deaths: "MS_deaths_historical.png",
+    RO_confirmed: "RO_confirmed_historical.png",
+    AP_deaths: "AP_deaths_historical.png",
+    MT_confirmed: "MT_confirmed_historical.png",
+    RO_deaths: "RO_deaths_historical.png",
+    BA_confirmed: "BA_confirmed_historical.png",
+    MT_deaths: "MT_deaths_historical.png",
+    RR_confirmed: "RR_confirmed_historical.png",
+    BA_deaths: "BA_deaths_historical.png",
+    PA_confirmed: "PA_confirmed_historical.png",
+    RR_deaths: "RR_deaths_historical.png",
+    CE_confirmed: "CE_confirmed_historical.png",
+    PA_deaths: "PA_deaths_historical.png",
+    RS_confirmed: "RS_confirmed_historical.png",
+    CE_deaths: "CE_deaths_historical.png",
+    PB_confirmed: "PB_confirmed_historical.png",
+    RS_deaths: "RS_deaths_historical.png",
+    DF_confirmed: "DF_confirmed_historical.png",
+    PB_deaths: "PB_deaths_historical.png",
+    SC_confirmed: "SC_confirmed_historical.png",
+    DF_deaths: "DF_deaths_historical.png",
+    PE_confirmed: "PE_confirmed_historical.png",
+    SC_deaths: "SC_deaths_historical.png",
+    ES_confirmed: "ES_confirmed_historical.png",
+    PE_deaths: "PE_deaths_historical.png",
+    SE_confirmed: "SE_confirmed_historical.png",
+    ES_deaths: "ES_deaths_historical.png",
+    PI_confirmed: "PI_confirmed_historical.png",
+    SE_deaths: "SE_deaths_historical.png",
+    GO_confirmed: "GO_confirmed_historical.png",
+    PI_deaths: "PI_deaths_historical.png",
+    SP_confirmed: "SP_confirmed_historical.png",
+  };
   $(function () {
-    $('.estados').select2({
-      width: 'resolve'
+    $(".estados-casos").select2({
+      width: "resolve",
     });
     $("#myTab a").on("click", function (e) {
       e.preventDefault();
       $(this).tab("show");
     });
+  });
+  $(".estados-casos").change(function () {
+    val = $(".estados-casos").val();
+    $("#outros-estados-casos").attr("src", baseUrl + imgUrls[val]);
+  });
+  $(".estados-mortes").change(function () {
+    val = $(".estados-mortes").val();
+    $("#outros-estados-mortes").attr("src", baseUrl + imgUrls[val]);
   });
 </script>
