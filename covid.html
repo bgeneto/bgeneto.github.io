@@ -30,29 +30,34 @@ layout: default
 
       <h3 id="graf-casos">CASOS</h3>
 
-      <h4>Número total de <b>casos</b> por <em>densidade demográfica</em> nos <b>estados</b></h4>
-      <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_per_den_per_state.png" target="_blank">
-        <img class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_per_den_per_state.png" alt="confirmed_per_den_per_state" style="cursor: zoom-in;" />
+      <span>
+        Selecione o tipo de gráfico:
+        <select id="br-casos-combo" style="width: 55%;">
+          <option value="confirmed_per_state">Casos (estados)</option>
+          <option value="confirmed_per_city">Casos (capitais)</option>
+          <option value="confirmed_per_mil_per_state">Casos por milhão (estados)</option>
+          <option value="confirmed_per_mil_per_city">Casos por milhão (capitais)</option>
+          <option value="confirmed_per_den_per_state">Casos por densidade (estados)</option>
+          <option value="confirmed_per_den_per_city">Casos por densidade (capitais)</option> 
+        </select>  
+      </span>
+      <br /><br />
+      <a id="br-casos-link" href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_per_state.png" target="_blank">
+        <img id="br-casos-img" class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_per_state.png" alt="confirmed_per_state" style="cursor: zoom-in;" />
       </a>
-
-      <h4>Número total de <b>casos</b> por <em>densidade demográfica</em> nas <b>cidades</b></h4>
-
-      <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_per_den_per_city.png" target="_blank">
-        <img class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_per_den_per_city.png" alt="confirmed_per_den_per_city" style="cursor: zoom-in;" />
-      </a>
-
-      <h4>Número total de <b>casos</b> por <em>milhão de habitantes</em> nos <b>estados</b></h4>
-      <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_per_mil_per_state.png" target="_blank">
-        <img class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_per_mil_per_state.png" alt="confirmed_per_mil_per_state" style="cursor: zoom-in;" />
-      </a>
-
-      <h4>Número total de <b>casos</b> por <em>milhão de habitantes</em> nas <b>cidades</b></h4>
-      <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_per_mil_per_city.png" target="_blank">
-        <img class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_per_mil_per_city.png" alt="confirmed_per_mil_per_city" style="cursor: zoom-in;" />
-      </a>
-
+      
       <h3 id="graf-obitos">ÓBITOS</h3>
 
+      <h4>Número total de <b>óbitos</b> por <em>milhão de habitantes</em> nos <b>estados</b></h4>
+      <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_mil_per_state.png" target="_blank">
+        <img class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_mil_per_state.png" alt="deaths_per_mil_per_state" style="cursor: zoom-in;" />
+      </a>
+
+      <h4>Número total de <b>óbitos</b> por <em>milhão de habitantes</em> nas <b>cidades</b></h4>
+      <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_mil_per_city.png" target="_blank">
+        <img class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_mil_per_city.png" alt="deaths_per_mil_per_city" style="cursor: zoom-in;" />
+      </a>
+      
       <h4>Número total de <b>óbitos</b> por <em>densidade demográfica</em> nos <b>estados</b></h4>
       <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_den_per_state.png" target="_blank">
         <img class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_den_per_state.png" alt="deaths_per_den_per_state" style="cursor: zoom-in;" />
@@ -61,15 +66,7 @@ layout: default
 
       <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_den_per_city.png" target="_blank">
         <img class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_den_per_city.png" alt="deaths_per_den_per_city" style="cursor: zoom-in;" />
-      </a>
-      <h4>Número total de <b>óbitos</b> por <em>milhão de habitantes</em> nos <b>estados</b></h4>
-      <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_mil_per_state.png" target="_blank">
-        <img class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_mil_per_state.png" alt="deaths_per_mil_per_state" style="cursor: zoom-in;" />
-      </a>
-      <h4>Número total de <b>óbitos</b> por <em>milhão de habitantes</em> nas <b>cidades</b></h4>
-      <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_mil_per_city.png" target="_blank">
-        <img class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_mil_per_city.png" alt="deaths_per_mil_per_city" style="cursor: zoom-in;" />
-      </a>
+      </a>      
     </div>
 
     <div class="tab-pane fade" id="pills-brasil-animacoes" role="tabpanel" aria-labelledby="pills-brasil-animacoes-tab">
@@ -330,6 +327,7 @@ layout: default
 
 <script>
   var baseUrl = "https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=";
+
   var imgUrls = {
     AC_confirmed: "AC_confirmed_historical.png",
     GO_deaths: "GO_deaths_historical.png",
@@ -414,6 +412,11 @@ layout: default
       val = $(this).val();
       $("#outros-estados-mortes").attr("src", baseUrl + imgUrls[val]);
       $("#outros-estados-mortes-link").attr("href", baseUrl + imgUrls[val]);
+    });
+    $("#br-casos-combo").change(function () {
+      val = $(this).val();
+      $("#br-casos-img").attr("src", baseUrl + val + ".png");
+      $("#br-casos-link").attr("href", baseUrl + val + ".png");
     });
     $("#wcombo").change(function () {
       val = $(this).val();
