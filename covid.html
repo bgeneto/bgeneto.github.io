@@ -23,13 +23,7 @@ layout: default
   <div class="tab-content" id="pills-tabContent">
     <div class="tab-pane fade show active" id="pills-brasil-graficos" role="tabpanel" aria-labelledby="pills-brasil-graficos-tab">
       <br />
-      <ul>
-        <li><a href="#graf-casos">Gráficos: casos</a></li>
-        <li><a href="#graf-obitos">Gráficos: óbitos</a></li>
-      </ul>
-
       <h3 id="graf-casos">CASOS</h3>
-
       <span>
         Selecione o tipo de gráfico:
         <select id="br-casos-combo" style="width: 55%;">
@@ -45,28 +39,23 @@ layout: default
       <a id="br-casos-link" href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_per_state.png" target="_blank">
         <img id="br-casos-img" class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=confirmed_per_state.png" alt="confirmed_per_state" style="cursor: zoom-in;" />
       </a>
-      
+      <br />
       <h3 id="graf-obitos">ÓBITOS</h3>
-
-      <h4>Número total de <b>óbitos</b> por <em>milhão de habitantes</em> nos <b>estados</b></h4>
-      <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_mil_per_state.png" target="_blank">
-        <img class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_mil_per_state.png" alt="deaths_per_mil_per_state" style="cursor: zoom-in;" />
-      </a>
-
-      <h4>Número total de <b>óbitos</b> por <em>milhão de habitantes</em> nas <b>cidades</b></h4>
-      <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_mil_per_city.png" target="_blank">
-        <img class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_mil_per_city.png" alt="deaths_per_mil_per_city" style="cursor: zoom-in;" />
-      </a>
-      
-      <h4>Número total de <b>óbitos</b> por <em>densidade demográfica</em> nos <b>estados</b></h4>
-      <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_den_per_state.png" target="_blank">
-        <img class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_den_per_state.png" alt="deaths_per_den_per_state" style="cursor: zoom-in;" />
-      </a>
-      <h4>Número total de <b>óbitos</b> por <em>densidade demográfica</em> nas <b>cidades</b></h4>
-
-      <a href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_den_per_city.png" target="_blank">
-        <img class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_den_per_city.png" alt="deaths_per_den_per_city" style="cursor: zoom-in;" />
-      </a>      
+      <span>
+        Selecione o tipo de gráfico:
+        <select id="br-mortes-combo" style="width: 55%;">
+          <option value="deaths_per_state">Óbitos (estados)</option>
+          <option value="deaths_per_city">Óbitos (capitais)</option>
+          <option value="deaths_per_mil_per_state">Óbitos por milhão (estados)</option>
+          <option value="deaths_per_mil_per_city">Óbitos por milhão (capitais)</option>
+          <option value="deaths_per_den_per_state">Óbitos por densidade (estados)</option>
+          <option value="deaths_per_den_per_city">Óbitos por densidade (capitais)</option> 
+        </select>  
+      </span>
+      <br /><br />
+      <a id="br-mortes-link" href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_state.png" target="_blank">
+        <img id="br-mortes-img" class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=deaths_per_state.png" alt="deaths_per_state" style="cursor: zoom-in;" />
+      </a>   
     </div>
 
     <div class="tab-pane fade" id="pills-brasil-animacoes" role="tabpanel" aria-labelledby="pills-brasil-animacoes-tab">
@@ -413,11 +402,18 @@ layout: default
       $("#outros-estados-mortes").attr("src", baseUrl + imgUrls[val]);
       $("#outros-estados-mortes-link").attr("href", baseUrl + imgUrls[val]);
     });
+    // Brasil: casos
     $("#br-casos-combo").change(function () {
       val = $(this).val();
       $("#br-casos-img").attr("src", baseUrl + val + ".png");
       $("#br-casos-link").attr("href", baseUrl + val + ".png");
     });
+    // Brasil: óbitos
+    $("#br-mortes-combo").change(function () {
+      val = $(this).val();
+      $("#br-mortes-img").attr("src", baseUrl + val + ".png");
+      $("#br-mortes-link").attr("href", baseUrl + val + ".png");
+    });    
     $("#wcombo").change(function () {
       val = $(this).val();
       $("#wsource").attr("src", baseUrl + vidUrls[val]);
