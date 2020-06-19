@@ -133,7 +133,6 @@ layout: default
 
     <div class="tab-pane fade" id="pills-mundo-animacoes" role="tabpanel" aria-labelledby="pills-mundo-animacoes-tab">
       <br />
-      <h3 id="wanim-casos">CASOS</h3>
       <span>
         Selecione o tipo de animação:
         <select id="wcombo" style="width: 55%;">
@@ -333,7 +332,7 @@ layout: default
       $(this).tab("show");
     });
     // activate select2 comboboxes
-    $("#estados-casos, #estados-mortes).select2({
+    $("#estados-casos, #estados-mortes").select2({
       width: "resolve",
     });
     // onchange load images or videos
