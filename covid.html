@@ -17,8 +17,11 @@ layout: default
       <a class="nav-link" id="pills-mundo-animacoes-tab" data-toggle="pill" href="#pills-mundo-animacoes" role="tab" aria-controls="pills-mundo-animacoes" aria-selected="false">Mundo: animações</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="pills-outros-graficos-tab" data-toggle="pill" href="#pills-outros-graficos" role="tab" aria-controls="pills-outros-graficos" aria-selected="false">Outros: gráficos</a>
+      <a class="nav-link" id="pills-estados-graficos-tab" data-toggle="pill" href="#pills-estados-graficos" role="tab" aria-controls="pills-estados-graficos" aria-selected="false">Estados: gráficos</a>
     </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-capitais-graficos-tab" data-toggle="pill" href="#pills-capitais-graficos" role="tab" aria-controls="pills-capitais-graficos" aria-selected="false">Capitais: gráficos</a>
+    </li>    
   </ul>
   <div class="tab-content" id="pills-tabContent">
     <div class="tab-pane fade show active" id="pills-brasil-graficos" role="tabpanel" aria-labelledby="pills-brasil-graficos-tab">
@@ -135,7 +138,7 @@ layout: default
       <a id="wlink" href="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=cases_animated_pt.mp4" target="_blank">download</a>
     </div>
 
-    <div class="tab-pane fade" id="pills-outros-graficos" role="tabpanel" aria-labelledby="pills-outros-graficos-tab">
+    <div class="tab-pane fade" id="pills-estados-graficos" role="tabpanel" aria-labelledby="pills-estados-graficos-tab">
       <br />
       <div>
         <h3>CASOS</h3>
@@ -237,10 +240,117 @@ layout: default
             <img id="outros-estados-mortes" class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=AC_state_deaths.png" />
           </a>
         </div>
+      </div>
+    </div>
+    
+    <div class="tab-pane fade" id="pills-capitais-graficos" role="tabpanel" aria-labelledby="pills-capitais-graficos-tab">
+      <br />
+      <div>
+        <h3>CASOS</h3>
+        <span>
+          <select id="capitais-casos" style="width: 55%;">
+            <optgroup label="Região Norte">
+              <option value="AC_city_confirmed">Rio Branco</option>
+              <option value="AP_city_confirmed">Macapá</option>
+              <option value="AM_city_confirmed">Manaus</option>
+              <option value="PA_city_confirmed">Belém</option>
+              <option value="RO_city_confirmed">Porto Velho</option>
+              <option value="RR_city_confirmed">Boa Vista</option>
+              <option value="TO_city_confirmed">Palmas</option>
+            </optgroup>
+            <optgroup label="Região Nordeste">
+              <option value="AL_city_confirmed">Maceió</option>
+              <option value="BA_city_confirmed">Salvador</option>
+              <option value="CE_city_confirmed">Fortaleza</option>
+              <option value="MA_city_confirmedd">São Luís</option>
+              <option value="PB_city_confirmed">João Pessoa</option>
+              <option value="PE_city_confirmedd">Recife</option>
+              <option value="PI_city_confirmed">Teresina</option>
+              <option value="RN_city_confirmed">Natal</option>
+              <option value="SE_city_confirmedd">Aracaju</option>
+            </optgroup>
+            <optgroup label="Região Centro-Oeste">
+              <option value="DF_city_confirmed">Brasília</option>
+              <option value="GO_city_confirmed">Goiânia</option>
+              <option value="MT_city_confirmed">Cuiabá</option>
+              <option value="MS_city_confirmedd">Campo Grande</option>
+            </optgroup>
+            <optgroup label="Região Sudeste">
+              <option value="ES_city_confirmed">Vitória</option>
+              <option value="MG_city_confirmed">Belo Horizonte</option>
+              <option value="RJ_city_confirmed">Rio de Janeiro</option>
+              <option value="SP_city_confirmed">São Paulo</option>
+            </optgroup>
+            <optgroup label="Região Sul">
+              <option value="PR_city_confirmed">Curitiba</option>
+              <option value="RS_city_confirmed">Porto Alegre</option>
+              <option value="SC_city_confirmed">Florianópolis</option>
+            </optgroup>
+          </select>
+        </span>
+        <br /><br />
+        <div id="img-container-casos-capitais">
+          <a id="outros-capitais-casos-link" href="https://cloudfup.com.br/index.php/apps/files_sharing/ajax/publicpreview.php?x=1280&y=1280&a=1&t=0EV4AgOzprAy73o&file=%2F%2FAC_city_confirmed.png" target="_blank">
+            <img id="outros-capitais-casos" class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=AC_city_confirmed.png" />
+          </a>
+        </div>
+      </div>
+      <br />
+      <div>
+        <h3>ÓBITOS</h3>
+        <span>
+          <select id="capitais-mortes" style="width: 55%;">
+            <optgroup label="Região Norte">
+              <option value="AC_city_deaths">Rio Branco</option>
+              <option value="AP_city_deaths">Macapá</option>
+              <option value="AM_city_deaths">Manaus</option>
+              <option value="PA_city_deaths">Belém</option>
+              <option value="RO_city_deaths">Porto Velho</option>
+              <option value="RR_city_deaths">Boa Vista</option>
+              <option value="TO_city_deaths">Palmas</option>
+            </optgroup>
+            <optgroup label="Região Nordeste">
+              <option value="AL_city_deaths">Maceió</option>
+              <option value="BA_city_deaths">Salvador</option>
+              <option value="CE_city_deaths">Fortaleza</option>
+              <option value="MA_city_deaths">São Luís</option>
+              <option value="PB_city_deaths">João Pessoa</option>
+              <option value="PE_city_deaths">Recife</option>
+              <option value="PI_city_deaths">Teresina</option>
+              <option value="RN_city_deaths">Natal</option>
+              <option value="SE_city_deaths">Aracaju</option>
+            </optgroup>
+            <optgroup label="Região Centro-Oeste">
+              <option value="DF_city_deaths">Brasília</option>
+              <option value="GO_city_deaths">Goiânia</option>
+              <option value="MT_city_deaths">Cuiabá</option>
+              <option value="MS_city_deaths">Campo Grande</option>
+            </optgroup>
+            <optgroup label="Região Sudeste">
+              <option value="ES_city_deaths">Vitória</option>
+              <option value="MG_city_deaths">Belo Horizonte</option>
+              <option value="RJ_city_deaths">Rio de Janeiro</option>
+              <option value="SP_city_deaths">São Paulo</option>
+            </optgroup>
+            <optgroup label="Região Sul">
+              <option value="PR_city_deaths">Curitiba</option>
+              <option value="RS_city_deaths">Porto Alegre</option>
+              <option value="SC_city_deaths">Florianópolis</option>
+            </optgroup>
+          </select>
+        </span>
+        <br /><br />
+        <div id="img-container-mortes">
+          <a id="outros-estados-mortes-link" href="https://cloudfup.com.br/index.php/apps/files_sharing/ajax/publicpreview.php?x=1280&y=1280&a=1&t=0EV4AgOzprAy73o&file=%2F%2FAC_state_deaths.png" target="_blank">
+            <img id="outros-estados-mortes" class="zoom" src="https://cloudfup.com.br/index.php/s/0EV4AgOzprAy73o/download?path=%2F&files=AC_state_deaths.png" />
+          </a>
+        </div>
         <br /><br />
         <p style="font-size: small;">*Clique na imagem para ampliar e/ou baixar.</p>
       </div>
-    </div>
+    </div>    
+    <br /><br />
+    <p style="font-size: small;">*Clique na imagem para ampliar e/ou baixar.</p>
   </div>
 </div>
 <br />
@@ -263,7 +373,7 @@ layout: default
       $(this).tab("show");
     });
     // activate select2 comboboxes
-    $("#estados-casos, #estados-mortes").select2({
+    $("#estados-casos, #estados-mortes, #capitais-casos, #capitais-mortes").select2({
       width: "resolve",
     });
     // onchange load images or videos
@@ -277,6 +387,16 @@ layout: default
       $("#outros-estados-mortes").attr("src", baseUrl + val + "png");
       $("#outros-estados-mortes-link").attr("href", viewUrl + val + "png");
     });
+    $("#capitais-casos").change(function () {
+      val = $(this).val();
+      $("#outros-capitais-casos").attr("src", baseUrl + val + ".png");
+      $("#outros-capitais-casos-link").attr("href", viewUrl + val + "png");
+    });
+    $("#capitais-mortes").change(function () {
+      val = $(this).val();
+      $("#outros-capitais-mortes").attr("src", baseUrl + val + "png");
+      $("#outros-capitais-mortes-link").attr("href", viewUrl + val + "png");
+    });    
     // Brasil: casos
     $("#br-casos-combo").change(function () {
       val = $(this).val();
